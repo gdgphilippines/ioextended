@@ -2,9 +2,113 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Hello</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="styles/style.css">
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="scripts/App.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Google I/O 2016 Extended Roadshow" />
+	<meta property="og:url" content="http://ioextended.gdgph.org"/>
+	<meta property="og:site_name" content="Google I/O 2016 Extended Roadshow" />
+	<meta property="og:image" content="http://www.senti.com.ph/img/logofull-blue.png" />
+	<meta name="twitter:site" content="@senti_ph" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="theme-color" content="#afbdc4">
+	<title>I/O Extended Roadshow</title>
 </head>
 <body>
-	
+<div class="container">
+	<div class="border">
+		<div class="b1"></div>
+		<div class="b2"></div>
+		<div class="b3"></div>
+		<div class="b4"></div>
+	</div>
+	<div class="action-bar">
+		<div class="row">
+			<div class="cell">
+				<a href="#" class="menu"><i class="md-icon">menu</i></a>
+				<a href="" class="logo"></a>
+			</div>
+			<div class="cell middle">
+				<ul class="nav">
+					<li><a data-section="about">About</a></li>
+					<li><a data-section="manila">Manila</a></li>
+					<li><a data-section="subic">Subic</a></li>
+					<li><a data-section="cavite">Cavite</a></li>
+					<li><a data-section="laguna">Laguna</a></li>
+					<li><a data-section="daet">Daet</a></li>
+					<li><a data-section="palawan">Palawan</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="slider">
+		<div class="cover"><img src="images/bg/io_purple.png"></div>
+		<ul class="nav">
+			<li><a data-section="about">About</a></li>
+			<li><a data-section="manila">Manila</a></li>
+			<li><a data-section="subic">Subic</a></li>
+			<li><a data-section="cavite">Cavite</a></li>
+			<li><a data-section="laguna">Laguna</a></li>
+			<li><a data-section="daet">Daet</a></li>
+			<li><a data-section="palawan">Palawan</a></li>
+		</ul>
+	</div>
+	<div class="black-trans"></div>
+	<section name="about">
+		<div class="paper">
+			<div class="cover"></div>
+			<div class="wrapper">
+				<h1>About</h1>
+			</div>
+		</div>
+		<div class="paper">
+			<div class="cover">
+
+			</div>
+			<div class="wrapper">
+				<h1>Hehe</h1>
+			</div>
+		</div>
+	</section>
+	<section name="manila">
+		<div class="paper">
+			<div class="cover"></div>
+			<div class="wrapper">
+				<h1>About</h1>
+			</div>
+		</div>
+		<div class="paper">
+			<div class="cover">
+
+			</div>
+			<div class="wrapper">
+				<h1>Hehe</h1>
+			</div>
+		</div>
+	</section>
+	<section name="error">
+		<div class="paper">
+			<div class="wrapper">
+				<h1>Error</h1>
+				<p>This page does not exist.</p>
+			</div>
+		</div>
+	</section>
+	<div class="footer">
+		<div class="columns">
+			<div class="col-6"><img src="images/bg/io.png" height="48px"></div>
+			<div class="col-6 right" style="padding-top: 20px;">Powered by <img src="images/bg/gdgph-logo_black.png" height="18px" style="vertical-align: middle; margin-left: 8px;"></div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function() {
+		App.ready();
+	})
+</script>
 </body>
 </html>
