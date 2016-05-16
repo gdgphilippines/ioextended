@@ -7,6 +7,63 @@ a {
     outline: none; }
   a:active {
     outline: none; }
+  a.flat_button {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.26);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    display: table-cell;
+    min-width: 64px;
+    max-width: 400px;
+    height: 36px;
+    padding: 0 8px;
+    vertical-align: middle;
+    text-align: center; }
+  a.flat_button[onclick] {
+    color: #005cb9; }
+  a.flat_button[href] {
+    color: #005cb9; }
+  a.flat_button[id] {
+    color: #005cb9; }
+  a.raised_button {
+    background: rgba(0, 0, 0, 0.12);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.26);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+    min-width: 64px;
+    position: relative;
+    overflow: hidden;
+    display: table-cell;
+    height: 36px;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    padding: 0 8px;
+    font-size: 14px; }
+  a.raised_button[onclick] {
+    background: #005cb9;
+    color: white; }
+  a.raised_button[href] {
+    background: #005cb9;
+    color: white; }
+  a.raised_button[id] {
+    background: #005cb9;
+    color: white; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -2108,19 +2165,57 @@ section {
   top: 50px;
   opacity: 0;
   display: none; }
+  section h1, section h2, section h3, section h4, section h5, section h6 {
+    color: #445963;
+    font-weight: 400;
+    font-size: 36px;
+    padding: 24px; }
   section .paper {
     background: white;
     border-radius: 2px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 48px; }
+    section .paper span.title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #445963; }
+    section .paper p {
+      color: #445963;
+      line-height: 150%; }
   section .cover {
     position: relative;
     display: block;
     width: 100%;
-    height: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-color: #b0bec5; }
   section .wrapper {
     padding: 24px; }
+  section .maps {
+    height: 400px; }
+
+i.marker {
+  width: 48px;
+  height: 48px;
+  display: block;
+  border-radius: 100%;
+  background-color: #F44336;
+  background-image: url(../images/bg/marker.png);
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+i.register {
+  width: 48px;
+  height: 48px;
+  display: block;
+  border-radius: 100%;
+  background-color: #5c6bc0;
+  background-image: url(../images/bg/ic_account-multiple_white.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50%; }
 
 .columns {
   overflow: hidden;
@@ -2138,9 +2233,11 @@ section {
   display: table;
   width: 100%;
   padding: 48px;
-  color: #445963;
+  color: #afbdc4;
   font-weight: 500;
   font-size: 12px; }
+  .footer a {
+    color: #445963; }
 
 .slider {
   position: fixed;
@@ -2179,5 +2276,10 @@ section {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   display: none; }
+
+@media screen and (max-width: 500px) {
+  [class^="col-"] {
+    margin-left: 0%;
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
