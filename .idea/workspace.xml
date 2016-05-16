@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="65178b87-3f7b-422b-ac42-8d32cef0008e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/12b1ae89bf374a8dad3d3fa490e7c4bcf7fc6303/style.scssc" afterPath="$PROJECT_DIR$/.sass-cache/12b1ae89bf374a8dad3d3fa490e7c4bcf7fc6303/style.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/bg/io.png" afterPath="$PROJECT_DIR$/images/bg/io.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/style.css" afterPath="$PROJECT_DIR$/styles/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/style.css.map" afterPath="$PROJECT_DIR$/styles/style.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/style.scss" afterPath="$PROJECT_DIR$/styles/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
     </list>
     <ignored path="ioextended.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="285" column="29" selection-start-line="285" selection-start-column="29" selection-end-line="285" selection-end-column="29" />
+            <state relative-caret-position="308">
+              <caret line="294" column="20" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="20" />
               <folding>
                 <marker date="1463364346993" expanded="true" signature="1158:11936" placeholder="..." />
                 <marker date="1463364346993" expanded="true" signature="1182:11858" placeholder="..." />
@@ -53,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="2974" column="29" selection-start-line="2974" selection-start-column="29" selection-end-line="2974" selection-end-column="29" />
+            <state relative-caret-position="464">
+              <caret line="2959" column="45" selection-start-line="2959" selection-start-column="45" selection-end-line="2959" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -100,8 +97,8 @@
       <list>
         <option value="$PROJECT_DIR$/styles/global.scss" />
         <option value="$PROJECT_DIR$/scripts/App.js" />
-        <option value="$PROJECT_DIR$/styles/style.scss" />
         <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/styles/style.scss" />
       </list>
     </option>
   </component>
@@ -249,12 +246,12 @@
       <updated>1463309342847</updated>
       <workItem from="1463309344289" duration="10020000" />
       <workItem from="1463357538285" duration="1997000" />
-      <workItem from="1463360227405" duration="4117000" />
+      <workItem from="1463360227405" duration="4593000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16134000" />
+    <option name="totallyTimeSpent" value="16610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="24" width="1313" height="744" extended-state="6" />
@@ -318,18 +315,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="2974" column="29" selection-start-line="2974" selection-start-column="29" selection-end-line="2974" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="285" column="29" selection-start-line="285" selection-start-column="29" selection-end-line="285" selection-end-column="29" />
+        <state relative-caret-position="308">
+          <caret line="294" column="20" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="20" />
           <folding>
             <marker date="1463364346993" expanded="true" signature="1158:11936" placeholder="..." />
             <marker date="1463364346993" expanded="true" signature="1182:11858" placeholder="..." />
@@ -345,6 +334,14 @@
             <marker date="1463364346993" expanded="true" signature="11533:11851" placeholder="..." />
             <marker date="1463364346993" expanded="true" signature="11557:11843" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="2959" column="45" selection-start-line="2959" selection-start-column="45" selection-end-line="2959" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

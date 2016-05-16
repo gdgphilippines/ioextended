@@ -2195,6 +2195,8 @@ section {
     padding: 24px; }
   section .maps {
     height: 400px; }
+  section table tr:not(:first-child) td {
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
 i.marker {
   width: 48px;
