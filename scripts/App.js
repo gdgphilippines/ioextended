@@ -56,7 +56,7 @@ var App = {
 		}
 	},
 	refreshActionBar: function() {
-		if($(window).outerWidth() < 720) {
+		if($(window).outerWidth() < 820) {
 			$(".action-bar .menu").show();
 			$(".action-bar ul.nav").hide();
 		} else {
