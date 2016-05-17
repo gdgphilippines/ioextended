@@ -2198,6 +2198,114 @@ section {
   section table tr:not(:first-child) td {
     border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
+label {
+  display: block;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  color: #445963; }
+  label.inline {
+    display: inline;
+    margin-right: 12px; }
+  label:not(.switch) span {
+    cursor: text;
+    color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    top: 28px;
+    font-size: 16px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    label:not(.switch) span.top {
+      top: 0;
+      font-size: 12px; }
+  label input[type="checkbox"], label input[type="radio"] {
+    display: none; }
+  label:not(.switch) input[type="checkbox"] + span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    top: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    -webkit-transition: all 0s ease-in-out;
+    -moz-transition: all 0s ease-in-out;
+    -ms-transition: all 0s ease-in-out;
+    -o-transition: all 0s ease-in-out;
+    transition: all 0s ease-in-out; }
+    label:not(.switch) input[type="checkbox"] + span i.md-icon {
+      font-size: 18px !important;
+      position: relative;
+      top: -3px;
+      left: -2px;
+      margin: 0;
+      background: #005cb9;
+      color: white;
+      display: none; }
+  label:not(.switch) input[type="checkbox"]:checked + span {
+    border: 2px solid #005cb9;
+    background-color: #005cb9; }
+    label:not(.switch) input[type="checkbox"]:checked + span i.md-icon {
+      display: block; }
+  label.switch {
+    margin: 5px;
+    display: inline-block; }
+    label.switch input[type="checkbox"] + span {
+      display: inline-block;
+      width: 38px;
+      height: 16px;
+      margin: 0px 16px 0px 0px;
+      vertical-align: middle;
+      cursor: pointer;
+      float: left;
+      border-radius: 9px;
+      background-color: rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      position: relative; }
+      label.switch input[type="checkbox"] + span i {
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+        border-radius: 100%;
+        position: absolute;
+        left: -5px;
+        top: -2px;
+        width: 21px;
+        height: 21px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+    label.switch input[type="checkbox"]:checked + span {
+      background-color: #b2ceea; }
+    label.switch input[type="checkbox"]:checked + span i {
+      background-color: #005cb9;
+      left: 20px; }
+  label:not(.switch) input[type="radio"] + .md-icon {
+    font-size: 22px !important;
+    margin: 0;
+    margin-right: 12px;
+    color: #000;
+    opacity: .54; }
+    label:not(.switch) input[type="radio"] + .md-icon:before {
+      content: "radio_button_unchecked"; }
+  label:not(.switch) input[type="radio"]:checked + i.md-icon {
+    opacity: 1;
+    color: #005cb9; }
+    label:not(.switch) input[type="radio"]:checked + i.md-icon:before {
+      content: "radio_button_checked"; }
+
 i.marker {
   width: 48px;
   height: 48px;
@@ -2278,6 +2386,16 @@ i.register {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   display: none; }
+
+table.checklist b {
+  font-weight: 500;
+  opacity: .7; }
+table.checklist tr td > span {
+  padding-left: 28px;
+  color: #445963;
+  font-size: 14px; }
+table.checklist a {
+  color: #005cb9; }
 
 @media screen and (max-width: 500px) {
   [class^="col-"] {
