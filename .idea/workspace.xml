@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65178b87-3f7b-422b-ac42-8d32cef0008e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/12b1ae89bf374a8dad3d3fa490e7c4bcf7fc6303/style.scssc" afterPath="$PROJECT_DIR$/.sass-cache/12b1ae89bf374a8dad3d3fa490e7c4bcf7fc6303/style.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/style.css" afterPath="$PROJECT_DIR$/styles/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/style.css.map" afterPath="$PROJECT_DIR$/styles/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/style.scss" afterPath="$PROJECT_DIR$/styles/style.scss" />
-    </list>
+    <list default="true" id="65178b87-3f7b-422b-ac42-8d32cef0008e" name="Default" comment="" />
     <ignored path="ioextended.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -51,8 +45,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scavengerhunt/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="214" column="29" selection-start-line="214" selection-start-column="29" selection-end-line="214" selection-end-column="29" />
+            <state relative-caret-position="182">
+              <caret line="199" column="16" selection-start-line="199" selection-start-column="16" selection-end-line="199" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -113,7 +107,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1314" />
+    <option name="x" value="52" />
     <option name="y" value="-4" />
     <option name="width" value="1315" />
     <option name="height" value="773" />
@@ -264,15 +258,15 @@
       <workItem from="1463357538285" duration="1997000" />
       <workItem from="1463360227405" duration="5166000" />
       <workItem from="1463375717005" duration="2436000" />
-      <workItem from="1463472191662" duration="4927000" />
+      <workItem from="1463472191662" duration="5295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24546000" />
+    <option name="totallyTimeSpent" value="24914000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1314" y="-4" width="1315" height="773" extended-state="6" />
+    <frame x="52" y="-4" width="1315" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1721249" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -385,8 +379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scavengerhunt/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="214" column="29" selection-start-line="214" selection-start-column="29" selection-end-line="214" selection-end-column="29" />
+        <state relative-caret-position="182">
+          <caret line="199" column="16" selection-start-line="199" selection-start-column="16" selection-end-line="199" selection-end-column="16" />
           <folding />
         </state>
       </provider>
