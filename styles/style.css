@@ -2357,7 +2357,8 @@ i.register {
   height: 100%;
   z-index: 101;
   background: white;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+  overflow-y: scroll; }
   .slider .cover {
     background: #25c5d9;
     display: block;
