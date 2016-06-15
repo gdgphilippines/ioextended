@@ -3107,6 +3107,22 @@ i.register {
 .right {
 	text-align: right;
 }
+.sponsors {
+	margin-top: 50px;
+	color: rgba(0,0,0,.2);
+	text-align: center;
+	.col-6 {
+		padding-bottom: 30px;
+	}
+	b {
+		display: block;
+	}
+	img {
+		width: 170px;
+		vertical-align: middle;
+		margin: 10px;
+	}
+}
 .footer {
 	margin-top: 100px;
 	background: white;
@@ -3184,5 +3200,8 @@ table.checklist  {
 	[class^="col-"] {
 		margin-left: 0%;
 		width: 100%;
+	}
+	.footer .col-6 {
+		text-align: center;
 	}
 }

@@ -2336,6 +2336,19 @@ i.register {
 .right {
   text-align: right; }
 
+.sponsors {
+  margin-top: 50px;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: center; }
+  .sponsors .col-6 {
+    padding-bottom: 30px; }
+  .sponsors b {
+    display: block; }
+  .sponsors img {
+    width: 170px;
+    vertical-align: middle;
+    margin: 10px; }
+
 .footer {
   margin-top: 100px;
   background: white;
@@ -2401,6 +2414,9 @@ table.checklist a {
 @media screen and (max-width: 500px) {
   [class^="col-"] {
     margin-left: 0%;
-    width: 100%; } }
+    width: 100%; }
+
+  .footer .col-6 {
+    text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */
