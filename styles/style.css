@@ -2340,7 +2340,7 @@ i.register {
   margin-top: 50px;
   color: rgba(0, 0, 0, 0.2);
   text-align: center; }
-  .sponsors .col-6 {
+  .sponsors [class^="col-"] {
     padding-bottom: 30px; }
   .sponsors b {
     display: block; }

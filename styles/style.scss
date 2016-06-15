@@ -3111,7 +3111,7 @@ i.register {
 	margin-top: 50px;
 	color: rgba(0,0,0,.2);
 	text-align: center;
-	.col-6 {
+	[class^="col-"] {
 		padding-bottom: 30px;
 	}
 	b {
