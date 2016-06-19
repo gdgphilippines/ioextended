@@ -161,8 +161,9 @@
 			<script>
 				var map, marker;
 				function initMap() {
+					var lnglat = {lat: 14.639718, lng: 121.0758829};
 					map = new google.maps.Map(document.getElementById('mapsManila'), {
-						center: {lat: 14.5653304, lng: 120.9929111},
+						center: lnglat,
 						zoom: 15,
 						panControl:true,
 						zoomControl:true,
@@ -176,7 +177,7 @@
 						draggable: true
 					});
 					var marker = new google.maps.Marker({
-						position: {lat: 14.5653304, lng: 120.9929111},
+						position: lnglat,
 						map: map,
 						title: 'Google I/O 2016 Extended Roadshow Manila'
 					});
