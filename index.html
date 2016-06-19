@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="styles/style.css">
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="scripts/App.js"></script>
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Google I/O 2016 Extended Roadshow" />
@@ -158,36 +157,25 @@
 					</table>
 				</div>
 			</div>
-			<!--<script>-->
-				<!--var marker;-->
-				<!--var myCenter = new google.maps.LatLng(14.5653304,120.9929111);-->
-				<!--function initialize() {-->
-					<!--var mapProp = {-->
-						<!--center:myCenter,-->
-						<!--zoom:15,-->
-						<!--panControl:true,-->
-						<!--zoomControl:true,-->
-						<!--mapTypeControl:true,-->
-						<!--scaleControl:true,-->
-						<!--streetViewControl:true,-->
-						<!--overviewMapControl:true,-->
-						<!--rotateControl:true,-->
-						<!--scrollwheel: false,-->
-						<!--navigationControl: false,-->
-						<!--draggable: true,-->
-						<!--mapTypeId:google.maps.MapTypeId.ROADMAP-->
-					<!--};-->
-					<!--var map=new google.maps.Map(document.getElementById("mapsManila"),mapProp);-->
-					<!--var marker=new google.maps.Marker({-->
-						<!--position:myCenter,-->
-						<!--animation:google.maps.Animation.BOUNCE-->
-					<!--});-->
-					<!--marker.setMap(map);-->
-				<!--}-->
-				<!--google.maps.event.addDomListener(window, 'load', initialize);-->
+			
+			<script>
+				var map, marker;
+				function initMap() {
+					map = new google.maps.Map(document.getElementById('mapsManila'), {
+						center: {lat: 14.5653304, lng: 120.9929111},
+						zoom: 15
+					});
+					var marker = new google.maps.Marker({
+						position: {lat: 14.5653304, lng: 120.9929111},
+						map: map,
+						title: 'Hello World!'
+					});
+				}
+			</script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5aV9frbq5jIUmpELjuSD5X6n_xJjGBE8&callback=initMap"
+			async defer></script>
 
-			<!--</script>-->
-			<!--<div class="maps" id="mapsManila"></div>-->
+			<div class="maps" id="mapsManila"></div>
 		</div>
 		<center><br><br><img src="images/bg/extendedmanila.png"></center>
 		<div class="columns sponsors">
