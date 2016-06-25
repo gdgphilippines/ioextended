@@ -43,9 +43,7 @@ a {
     min-width: 64px;
     position: relative;
     overflow: hidden;
-    display: table-cell;
-    height: 36px;
-    vertical-align: middle;
+    display: inline-block;
     text-align: center;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -53,7 +51,7 @@ a {
     -o-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
-    padding: 0 8px;
+    padding: 12px 24px;
     font-size: 14px; }
   a.raised_button[onclick] {
     background: #005cb9;
@@ -2182,6 +2180,8 @@ section {
     section .paper p {
       color: #445963;
       line-height: 150%; }
+  section .wrapper {
+    padding: 24px; }
   section .cover {
     position: relative;
     display: block;
@@ -2191,12 +2191,20 @@ section {
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #b0bec5; }
-  section .wrapper {
-    padding: 24px; }
   section .maps {
     height: 400px; }
   section table tr:not(:first-child) td {
-    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    border-top: 1px solid rgba(0, 0, 0, 0.05); }
+
+.button-group {
+  margin-bottom: 24px; }
+  .button-group a {
+    background: #5c6bc0;
+    color: white;
+    margin-right: 12px;
+    margin-bottom: 12px; }
+  .button-group .selected {
+    background: #25c5da; }
 
 label {
   display: block;
@@ -2400,6 +2408,145 @@ i.register {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   display: none; }
+
+.loading {
+  position: relative;
+  margin: 50px 100px;
+  width: 52px;
+  height: 52px; }
+  .loading .circular {
+    animation: rotate 2s linear infinite;
+    transform-origin: center center;
+    width: 36px;
+    height: 36px;
+    margin: 8px; }
+  .loading .path {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-linecap: round; }
+
+.schedule {
+  padding: 24px 0; }
+  .schedule .loading {
+    display: block;
+    margin: 0px auto; }
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35px; }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124px; } }
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35px; }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124px; } }
+@-webkit-keyframes color {
+  100% {
+    stroke: #d62d20; }
+  0% {
+    stroke: #d62d20; }
+  40% {
+    stroke: #0057e7; }
+  66% {
+    stroke: #008744; }
+  80% {
+    stroke: #ffa700; }
+  90% {
+    stroke: #ffa700; } }
+@keyframes color {
+  100% {
+    stroke: #d62d20; }
+  0% {
+    stroke: #d62d20; }
+  40% {
+    stroke: #0057e7; }
+  66% {
+    stroke: #008744; }
+  80% {
+    stroke: #ffa700; }
+  90% {
+    stroke: #ffa700; } }
+table.schedule {
+  width: 100%;
+  border-collapse: collapse; }
+  table.schedule tr:hover td {
+    background: #f6f6f6; }
+  table.schedule td {
+    padding: 36px 24px; }
+    table.schedule td:first-child {
+      text-transform: uppercase;
+      color: #445963;
+      width: 25%; }
+      table.schedule td:first-child span {
+        font-size: 40px;
+        margin-right: 10px;
+        letter-spacing: -2px; }
+    table.schedule td:last-child a {
+      display: block; }
+    table.schedule td:last-child span {
+      display: block; }
+      table.schedule td:last-child span:first-child {
+        font-size: 22px;
+        color: #445963;
+        margin-bottom: 4px; }
+      table.schedule td:last-child span:last-child {
+        font-size: 13px;
+        color: #b0bec5; }
+
+.popup {
+  background: white;
+  z-index: 101;
+  position: fixed;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  max-width: 400px;
+  max-height: 80%;
+  overflow-y: scroll;
+  display: block;
+  opacity: 0; }
+  .popup h1, .popup h2, .popup h3, .popup h4, .popup h5, .popup h6 {
+    color: #445963;
+    font-weight: 400;
+    font-size: 36px;
+    padding: 24px; }
+  .popup span.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #445963; }
+  .popup p {
+    color: #445963;
+    line-height: 150%; }
+  .popup .wrapper {
+    padding: 24px; }
+
+.popup::-webkit-scrollbar {
+  width: 0px; }
 
 table.checklist b {
   font-weight: 500;
