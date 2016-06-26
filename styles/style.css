@@ -2411,7 +2411,7 @@ i.register {
 
 .loading {
   position: relative;
-  margin: 50px 100px;
+  margin: 50px auto;
   width: 52px;
   height: 52px; }
   .loading .circular {
@@ -2527,6 +2527,7 @@ table.schedule {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   max-width: 700px;
+  min-width: 320px;
   max-height: 80%;
   overflow-y: scroll;
   display: block;
