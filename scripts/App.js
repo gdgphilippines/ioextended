@@ -90,6 +90,7 @@ var App = {
 			$popup.html('<div class="loading"><svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"/></svg></div>');
 			var width = $popup.outerWidth(), height = $popup.outerHeight();
 			$popup.css({
+				"width": "1px",
 				"top": "50%",
 				"left": "50%",
 				"margin-top": 0-(height/2)+"px",
