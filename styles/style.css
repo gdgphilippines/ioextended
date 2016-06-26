@@ -2156,7 +2156,7 @@ i.md-icon {
           border-bottom: 2px solid #b0bec5; }
 
 section {
-  min-width: 360px;
+  min-width: 320px;
   max-width: 980px;
   margin: 0px auto;
   position: relative;
@@ -2495,6 +2495,8 @@ i.register {
 table.schedule {
   width: 100%;
   border-collapse: collapse; }
+  table.schedule tr[data-talk] {
+    cursor: pointer; }
   table.schedule tr:hover td {
     background: #f6f6f6; }
   table.schedule td {
@@ -2524,27 +2526,66 @@ table.schedule {
   position: fixed;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  max-width: 400px;
+  max-width: 700px;
+  min-width: 320px;
   max-height: 80%;
   overflow-y: scroll;
   display: block;
   opacity: 0; }
   .popup h1, .popup h2, .popup h3, .popup h4, .popup h5, .popup h6 {
     color: #445963;
-    font-weight: 400;
-    font-size: 36px;
-    padding: 24px; }
-  .popup span.title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #445963; }
+    font-weight: 400; }
+  .popup .cover {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #b0bec5; }
+  .popup span {
+    color: #b0bec5; }
+    .popup span.title {
+      color: #445963;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 14px; }
   .popup p {
     color: #445963;
     line-height: 150%; }
   .popup .wrapper {
     padding: 24px; }
+    .popup .wrapper.bt {
+      border-top: 1px solid rgba(0, 0, 0, 0.1); }
+      .popup .wrapper.bt [class^="col-"] {
+        padding-top: 24px;
+        padding-right: 12px; }
+      .popup .wrapper.bt table.speaker {
+        width: 100%; }
+        .popup .wrapper.bt table.speaker img {
+          border-radius: 100%;
+          width: 36px;
+          height: 36px;
+          margin-right: 12px; }
+        .popup .wrapper.bt table.speaker td:first-child {
+          width: 1px; }
+        .popup .wrapper.bt table.speaker b {
+          display: block;
+          color: #445963; }
+        .popup .wrapper.bt table.speaker span {
+          font-size: 14px; }
+      .popup .wrapper.bt p {
+        font-size: 14px; }
 
-.popup::-webkit-scrollbar {
+img.speaker {
+  border-radius: 100%;
+  vertical-align: middle;
+  margin: 0 8px;
+  width: 24px;
+  height: 24px; }
+
+.popup::-webkit-scrollbar, .slider::-webkit-scrollbar {
   width: 0px; }
 
 table.checklist b {
@@ -2557,6 +2598,21 @@ table.checklist tr td > span {
 table.checklist a {
   color: #005cb9; }
 
+.social {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-right: 12px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .social.fb {
+    background-image: url(../images/bg/fb.png); }
+  .social.gp {
+    background-image: url(../images/bg/gp.png); }
+  .social.tw {
+    background-image: url(../images/bg/tw.png); }
+
 @media screen and (max-width: 500px) {
   [class^="col-"] {
     margin-left: 0%;
@@ -2564,5 +2620,9 @@ table.checklist a {
 
   .footer .col-6 {
     text-align: center; } }
+@media screen and (max-width: 699px) {
+  .popup [class^="col-"] {
+    margin-left: 0%;
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

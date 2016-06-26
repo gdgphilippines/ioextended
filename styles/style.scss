@@ -2911,7 +2911,7 @@ i.md-icon {
 	}
 }
 section {
-	min-width: 360px;
+	min-width: 320px;
 	max-width: 980px;
 	margin: 0px auto;
 	position: relative;
@@ -3298,8 +3298,13 @@ i.register {
 table.schedule {
 	width: 100%;
 	border-collapse: collapse;
-	tr:hover td {
-		background: #f6f6f6;
+	tr {
+		&[data-talk] {
+			cursor: pointer;
+		}
+		&:hover td {
+			background: #f6f6f6;
+		}
 	}
 	td {
 		&:first-child {
@@ -3337,7 +3342,8 @@ table.schedule {
 	position: fixed;
 	box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
 	border-radius: 2px;
-	max-width: 400px;
+	max-width: 700px;
+	min-width: 320px;
 	max-height: 80%;
 	overflow-y: scroll;
 	display: block;
@@ -3345,13 +3351,25 @@ table.schedule {
 	h1,h2,h3,h4,h5,h6 {
 		color: #445963;
 		font-weight: 400;
-		font-size: 36px;
-		padding: 24px;
 	}
-	span.title {
-		font-size: 24px;
-		font-weight: bold;
-		color: #445963;
+	.cover {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 250px;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-color: #b0bec5;
+	}
+	span {
+		color: #b0bec5;
+		&.title {
+			color: #445963;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 14px;
+		}
 	}
 	p {
 		color: #445963;
@@ -3359,9 +3377,45 @@ table.schedule {
 	}
 	.wrapper {
 		padding: 24px;
+		&.bt {
+			border-top: 1px solid rgba(0,0,0,.1);
+			[class^="col-"] {
+				padding-top: 24px;
+				padding-right: 12px;
+			}
+			table.speaker {
+				width: 100%;
+				img {
+					border-radius: 100%;
+					width: 36px;
+					height: 36px;
+					margin-right: 12px;
+				}
+				td:first-child {
+					width: 1px;
+				}
+				b {
+					display: block;
+					color: #445963;
+				}
+				span {
+					font-size: 14px;
+				}
+			}
+			p {
+				font-size: 14px;
+			}
+		}
 	}
 }
-.popup::-webkit-scrollbar {
+img.speaker {
+	border-radius: 100%;
+	vertical-align: middle;
+	margin: 0 8px;
+	width: 24px;
+	height: 24px;
+}
+.popup::-webkit-scrollbar, .slider::-webkit-scrollbar {
 	width: 0px;
 }
 table.checklist  {
@@ -3378,6 +3432,24 @@ table.checklist  {
 		color: #005cb9;
 	}
 }
+.social {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	margin-right: 12px;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	&.fb {
+		background-image: url(../images/bg/fb.png);
+	}
+	&.gp {
+		background-image: url(../images/bg/gp.png);
+	}
+	&.tw {
+		background-image: url(../images/bg/tw.png);
+	}
+}
 @media screen and (max-width: 500px) {
 	[class^="col-"] {
 		margin-left: 0%;
@@ -3385,5 +3457,11 @@ table.checklist  {
 	}
 	.footer .col-6 {
 		text-align: center;
+	}
+}
+@media screen and (max-width: 699px) {
+	.popup [class^="col-"] {
+		margin-left: 0%;
+		width: 100%;
 	}
 }
