@@ -35,22 +35,24 @@ var App = {
 	},
 	schedule: function(el, action) {
 		$section = $(el).parents("section");
-		$section.find(".button-group a").removeClass("selected");
-		$(el).addClass("selected");
-		$section.find(".schedule")
-			.html('<div class="loading"><svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"/></svg></div>')
-			.load("schedules/"+$section.attr("name")+"/"+action+".html", function() {
-				$("table.schedule tr[data-talk]").click(function() {
-					App.popup(this, $(this).attr("data-talk"));
+		if(!$(el).is(".selected")) {
+			$section.find(".button-group a").removeClass("selected");
+			$(el).addClass("selected");
+			$section.find(".schedule")
+				.html('<div class="loading"><svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"/></svg></div>')
+				.load("schedules/"+$section.attr("name")+"/"+action+".html", function() {
+					$("table.schedule tr[data-talk]").click(function() {
+						App.popup(this, $(this).attr("data-talk"));
+					});
+					$("table.schedule tr").each(function() {
+						var talk = $(this).attr("data-talk");
+						if (typeof talk !== typeof undefined && talk !== false) {
+							if($(this).find("td:last-child span:first-child i").length == 0)
+							$(this).find("td:last-child span:first-child").append('<i class="md-icon" style="margin-left: 12px">info_outline</i>');
+						}
+					})
 				});
-				$("table.schedule tr").each(function() {
-					var talk = $(this).attr("data-talk");
-					if (typeof talk !== typeof undefined && talk !== false) {
-						if($(this).find("td:last-child span:first-child i").length == 0)
-						$(this).find("td:last-child span:first-child").append('<i class="md-icon" style="margin-left: 12px">info_outline</i>');
-					}
-				})
-			});
+		}
 	},
 	navigation: function(section) {
 		$current = $("section.selected").attr("name");
