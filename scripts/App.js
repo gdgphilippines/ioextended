@@ -97,7 +97,7 @@ var App = {
 				"left": "50%",
 				"margin-top": 0-(height/2)+"px",
 				"margin-left": 0-(width/2)+"px"
-			}).load("talks/"+section+"/"+category+"/"+action+".html", function() {
+			}).load("talks/"+section+"/"+action+".html", function() {
 				$popup.css("width", "1000px");
 				App.resizePopup();
 				width = $popup.outerWidth();
