@@ -132,7 +132,7 @@ var Data = {
 		},
 		"joyce-guiao": {
 			name: "Joyce Guiao",
-			title: "Freelancer",
+			title: "Freelance Mobile Developer",
 			bio: 'She graduated BS Computer Science at De La Salle University and is currently working as a freelancer. She won various hackathons and developer contests which includes Microsoft Image Cup - Innovation World Finalist (2014), Kabantay ng Bayan Champion (2014), DOST-FNRI Less Sugar Champion (2014) and DOST Mobile App Competition on Disaster Communication 2nd Runnerup (2014). Oh wait download her Android App <a href="https://play.google.com/store/apps/details?id=com.matchagames.setmania" target="_blank">here</a>',
 			sm: {
 				gp: "",
