@@ -1406,6 +1406,194 @@ var Data = {
 					}
 				]
 			}
+		},
+		palawan: {
+			"agenda": {
+				text: "Agenda",
+				desc: [
+					{
+						start: 8,
+						duration: {
+							h: 1,
+							m: 0
+						},
+						id: "",
+						title: "Check-in",
+						desc: "",
+						speakers: []
+					},
+					{
+						start: 9,
+						duration: {
+							h: 0,
+							m: 30
+						},
+						id: "welcome-remarks",
+						title: "Welcome Remarks",
+						desc: "",
+						speakers: ["ralph-regalado"]
+					},
+					{
+						start: 9.30,
+						duration: {
+							h: 0,
+							m: 15
+						},
+						id: "house-rules",
+						title: "House Rules, Agenda, Prize Instructions",
+						desc: "",
+						speakers: ["adam-baguyo"]
+					},
+					{
+						start: 9.45,
+						duration: {
+							h: 0,
+							m: 45
+						},
+						id: "keynote",
+						title: "Keynote",
+						desc: "",
+						speakers: ["johnny-benitez"]
+					},
+					{
+						start: 10.30,
+						duration: {
+							h: 0,
+							m: 15
+						},
+						id: "io16-experience",
+						title: "Google I/O 2016 Experience",
+						desc: "",
+						speakers: ["cristine-chen"]
+					},
+					{
+						start: 10.45,
+						duration: {
+							h: 0,
+							m: 30
+						},
+						id: "new-android",
+						title: "What's new in Android?",
+						desc: "",
+						speakers: ["jomar-tigcal"]
+					},
+					{
+						start: 11.15,
+						duration: {
+							h: 0,
+							m: 45
+						},
+						id: "gcp",
+						title: "Google Cloud Platform",
+						desc: "",
+						speakers: ["albert-padin"]
+					},
+					{
+						start: 12,
+						duration: {
+							h: 0,
+							m: 15
+						},
+						id: "",
+						title: "Sponsors' Talk",
+						desc: "",
+						speakers: []
+					},
+					{
+						start: 12.15,
+						duration: {
+							h: 0,
+							m: 45
+						},
+						id: "",
+						title: "Lunch",
+						desc: "",
+						speakers: []
+					},
+					{
+						start: 13,
+						duration: {
+							h: 3,
+							m: 30
+						},
+						id: "",
+						title: "Breakout Sessions",
+						desc: "",
+						speakers: []
+					},
+					{
+						start: 16.30,
+						duration: {
+							h: 0,
+							m: 30
+						},
+						id: "",
+						title: "Closing",
+						desc: "",
+						speakers: []
+					}
+				]
+			},
+			"workshops": {
+				text: "Workshops",
+				desc: [
+					{
+						start: 13,
+						duration: {
+							h: 3,
+							m: 30
+						},
+						id: "bigquery",
+						title: "Codelabs: Google BigQuery",
+						desc: "",
+						speakers: ["ralph-regalado"]
+					},
+					{
+						start: 13,
+						duration: {
+							h: 3,
+							m: 30
+						},
+						id: "designthiking",
+						title: "Design Thinking",
+						desc: "",
+						speakers: ["cristine-chen"]
+					},
+					{
+						start: 13,
+						duration: {
+							h: 3,
+							m: 30
+						},
+						id: "firebase",
+						title: "Codelabs: Firebase for Web",
+						desc: "",
+						speakers: ["albert-padin"]
+					},
+					{
+						start: 13,
+						duration: {
+							h: 3,
+							m: 30
+						},
+						id: "android-n",
+						title: "Codelabs: Android Nougat",
+						desc: "",
+						speakers: ["jomar-tigcal"]
+					},
+					{
+						start: 13,
+						duration: {
+							h: 3,
+							m: 30
+						},
+						id: "pwa",
+						title: "Codelabs: Progressive Web App",
+						desc: "",
+						speakers: ["juvar-abrera"]
+					}
+				]
+			}
 		}
 	}
 }

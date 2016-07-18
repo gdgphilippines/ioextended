@@ -134,7 +134,7 @@ var App = {
 				if(data.duration.h > 1)
 					duration += "s";
 				if(data.duration.h > 0 && data.duration.m > 0)
-					data.duration += " ";
+					duration += " ";
 				if(data.duration.m != 0)
 					duration += data.duration.m + " minute";
 				if(data.duration.m > 1)
