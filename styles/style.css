@@ -2204,7 +2204,7 @@ section {
     margin-right: 12px;
     margin-bottom: 12px; }
   .button-group .selected {
-    background: #25c5da; }
+    background: #25c5da !important; }
 
 label {
   display: block;
@@ -2495,7 +2495,7 @@ i.register {
 table.schedule {
   width: 100%;
   border-collapse: collapse; }
-  table.schedule tr[data-talk] {
+  table.schedule tr[data-talk], table.schedule tr[onclick] {
     cursor: pointer; }
   table.schedule tr:hover td {
     background: #f6f6f6; }
@@ -2614,6 +2614,11 @@ table.checklist a {
     background-image: url(../images/bg/tw.png); }
 
 @media screen and (max-width: 500px) {
+  table.schedule td:first-child span {
+    font-size: 25px; }
+  table.schedule td:last-child span:first-child {
+    font-size: 20px; }
+
   [class^="col-"] {
     margin-left: 0%;
     width: 100%; }

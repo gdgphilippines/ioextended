@@ -2968,7 +2968,7 @@ section {
 		margin-bottom: 12px;
 	}
 	.selected {
-		background: #25c5da;
+		background: #25c5da !important;
 	}
 }
 label {
@@ -3299,7 +3299,7 @@ table.schedule {
 	width: 100%;
 	border-collapse: collapse;
 	tr {
-		&[data-talk] {
+		&[data-talk], &[onclick] {
 			cursor: pointer;
 		}
 		&:hover td {
@@ -3451,6 +3451,14 @@ table.checklist  {
 	}
 }
 @media screen and (max-width: 500px) {
+	table.schedule {
+		td:first-child span {
+			font-size: 25px;
+		}
+		td:last-child span:first-child {
+			font-size: 20px;
+		}
+	}
 	[class^="col-"] {
 		margin-left: 0%;
 		width: 100%;

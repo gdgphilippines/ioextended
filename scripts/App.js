@@ -5,10 +5,6 @@ var App = {
 			$section = $(this).attr("href").substr(1);
 			App.navigation($section);
 		})
-		$("a[data-schedule]").click(function() {
-			var action = $(this).attr("data-schedule");
-			App.schedule(this, action);
-		})
 		$(window).resize(function() {
 			App.refreshActionBar();
 		});
@@ -18,7 +14,7 @@ var App = {
 		})
 		$(".black-trans").click(function() {
 			App.slider("hide");
-			App.popup(null, "hide");
+			App.popup(null, null, null, "hide");
 		})
 		$(".slider a").click(function() {
 			App.slider("hide");
@@ -26,32 +22,71 @@ var App = {
 		if(page == "")
 			page = "about";
 		App.navigation(page);
-		$(".button-group a:first-child").each(function() {
-			App.schedule(this, $(this).attr("data-schedule"))
-		})
 		$(window).resize(function() {
 			App.resizePopup();
 		})
+		$(".button-group").each(function() {
+			var buttons = Data.schedule[$(this).parents("section").attr("name")];
+			for(var i in buttons) {
+				$(this).append('<a data-schedule="'+i+'" onclick="App.schedule(\''+$(this).parents("section").attr("name")+'\',\''+i+'\')" class="raised_button">'+buttons[i].text+'</a>')
+			}
+		})
+		$(".button-group a:first-child").each(function() {
+			App.schedule($(this).parents("section").attr("name"), $(this).attr("data-schedule"));
+		})
+		$("a[data-schedule]").click(function() {
+			var action = $(this).attr("data-schedule");
+			App.schedule(this, action);
+		})
 	},
-	schedule: function(el, action) {
-		$section = $(el).parents("section");
-		if(!$(el).is(".selected")) {
+	schedule: function(leg, action) {
+		$section = $("section[name="+leg+"]");
+		$el = $section.find(".button-group a[data-schedule="+action+"]");
+		if(!$el.is(".selected")) {
 			$section.find(".button-group a").removeClass("selected");
-			$(el).addClass("selected");
-			$section.find(".schedule")
-				.html('<div class="loading"><svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"/></svg></div>')
-				.load("schedules/"+$section.attr("name")+"/"+action+".html", function() {
-					$("table.schedule tr[data-talk]").click(function() {
-						App.popup(this, $(this).attr("data-talk"));
-					});
-					$("table.schedule tr").each(function() {
-						var talk = $(this).attr("data-talk");
-						if (typeof talk !== typeof undefined && talk !== false) {
-							if($(this).find("td:last-child span:first-child i").length == 0)
-							$(this).find("td:last-child span:first-child").append('<i class="md-icon" style="margin-left: 12px">info_outline</i>');
-						}
-					})
-				});
+			$el.addClass("selected");
+			$section.find(".schedule").html('<table class="schedule"></table>');
+			var schedule = Data.schedule[leg];
+			var p_start = 0;
+			for(var i in schedule[action].desc) {
+				var s = schedule[action].desc[i];
+				var apm = "a";
+				var start = s.start;
+				if(p_start == s.start) {
+					start = "";
+					apm = "";
+				} else {
+					p_start = start;
+					if(start >= 12)
+						apm = "p";
+					if(start >= 13)
+						start -= 12;
+					start = start.toFixed(2);
+					if(start.indexOf(".00") >= 1)
+						start = start.substring(0, start.indexOf(".00"));
+				}
+				var duration = "";
+				if(s.duration.h != 0)
+					duration += s.duration.h + " hour";
+				if(s.duration.h > 1)
+					duration += "s";
+				if(s.duration.h > 0 && s.duration.m > 0)
+					duration += " ";
+				if(s.duration.m != 0)
+					duration += (s.duration.m) + " minute";
+				if(s.duration.m > 1)
+					duration += "s";
+				var speaker = " / ";
+				if(s.speakers.length != 0) {
+					for(var j in s.speakers) {
+						var speakerProfile = Data.speaker[s.speakers[j]];
+						speaker += '<img src="images/speakers/'+s.speakers[j]+'.jpg" class="speaker">'+speakerProfile.name;
+					}
+				} else speaker = "";
+				$section.find("table.schedule").append('<tr'+((s.id == "") ? "" : ' onclick="App.popup(\''+leg+'\', \''+action+'\', \''+s.id+'\')"')+'>'+
+					'<td><span>'+start+'</span>'+apm+'</td>'+
+					'<td><span>'+s.title+((s.id != "") ? '<i class="md-icon" style="margin-left: 12px">info_outline</i>' : "")+'</span><span>'+duration+speaker+'</span></td></tr>');
+			}
 		}
 	},
 	navigation: function(section) {
@@ -76,39 +111,73 @@ var App = {
 			}
 		}
 	},
-	popup: function(el, action) {
+	popup: function(leg, category, id, action) {
 		$popup = $(".popup");
 		if(action == "hide") {
 			$popup.css("opacity", "0").hide();
 			$("html, body").css("overflow", "auto");
 		} else {
 			$("html, body").css("overflow", "hidden");
-			var section = $(el).parents("section").attr("name");
-			var category = $(el).parents("section").find(".button-group a.selected").attr("data-schedule");
 			$(".black-trans").show();
+			var data = Data.schedule[leg][category].desc;
+			var index = 0;
+			for(var i in data) {
+				if(data[i].id == id) {
+					index = i;
+					break;
+				}
+			}
+			data = data[index];
+			var duration = "";
+				if(data.duration.h != 0)
+					duration += data.duration.h + " hour";
+				if(data.duration.h > 1)
+					duration += "s";
+				if(data.duration.h > 0 && data.duration.m > 0)
+					data.duration += " ";
+				if(data.duration.m != 0)
+					duration += data.duration.m + " minute";
+				if(data.duration.m > 1)
+					duration += "s";
+				var speaker = " / ";
+				if(data.speakers.length != 0) {
+					var speakerindex = 0;
+					for(var j in data.speakers) {
+						if(speakerindex > 0) 
+							speaker += " & ";
+						var speakerProfile = Data.speaker[data.speakers[j]];
+						speaker += speakerProfile.name;
+						speakerindex++;
+					}
+				} else speaker = "";
+			$popup.html('<div class="cover"></div>');
+			$popup.append('<div class="wrapper"><h2>'+data.title+'</h2><span>'+duration+speaker+'</span><p>'+data.desc+'</p></div>')
+			speaker = "";
+			for(var j in data.speakers) {
+				var speakerProfile = Data.speaker[data.speakers[j]];
+				speaker += '<div class="col-6"><table class="speaker"><tr>'+
+				'<td><img src="images/speakers/'+data.speakers[j]+'.jpg"></td>'+
+				'<td><b>'+speakerProfile.name+'</b><span>'+speakerProfile.title+'</span></td>'+
+				'</tr></table><p>'+speakerProfile.bio+'</p>'+
+				((speakerProfile.sm.gp != "") ? '<a href="'+speakerProfile.sm.gp+'" class="social gp" target="_blank"></a>': '')+
+				((speakerProfile.sm.fb != "") ? '<a href="'+speakerProfile.sm.fb+'" class="social fb" target="_blank"></a>': '')+
+				((speakerProfile.sm.tw != "") ? '<a href="'+speakerProfile.sm.tw+'" class="social tw" target="_blank"></a>': '')+
+				'</div>';
+			}
+			$popup.append('<div class="wrapper bt"><span class="title">Speakers</span><div class="columns">'+speaker+'</div></div>')
+			$popup.scrollTop(0);
 			$popup.show().animate({
 				"opacity": "1"
 			}, 500)
-			$popup.html('<div class="loading"><svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"/></svg></div>');
-			$popup.css("width", "1px");
+			$popup.css("width", "1000px");
+			App.resizePopup();
 			var width = $popup.outerWidth(), height = $popup.outerHeight();
 			$popup.css({
 				"top": "50%",
 				"left": "50%",
 				"margin-top": 0-(height/2)+"px",
 				"margin-left": 0-(width/2)+"px"
-			}).load("talks/"+section+"/"+action+".html", function() {
-				$popup.css("width", "1000px");
-				App.resizePopup();
-				width = $popup.outerWidth();
-				height = $popup.outerHeight();
-				$popup.css({
-					"top": "50%",
-					"left": "50%",
-					"margin-top": 0-(height/2)+"px",
-					"margin-left": 0-(width/2)+"px"
-				});
-			})
+			});
 		}
 	},
 	resizePopup: function() {
