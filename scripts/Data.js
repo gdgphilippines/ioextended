@@ -1355,17 +1355,6 @@ var Data = {
 							h: 3,
 							m: 30
 						},
-						id: "hourcode",
-						title: "Hour of Code",
-						desc: "",
-						speakers: ["jonah-mananghaya"]
-					},
-					{
-						start: 13,
-						duration: {
-							h: 3,
-							m: 30
-						},
 						id: "designthiking",
 						title: "Design Thinking",
 						desc: "",
