@@ -113,6 +113,7 @@ var App = {
 	},
 	popup: function(leg, category, id, action) {
 		$popup = $(".popup");
+		$popup.scrollTop(0);
 		if(action == "hide") {
 			$popup.css("opacity", "0").hide();
 			$("html, body").css("overflow", "auto");
@@ -165,7 +166,6 @@ var App = {
 				'</div>';
 			}
 			$popup.append('<div class="wrapper bt"><span class="title">Speakers</span><div class="columns">'+speaker+'</div></div>')
-			$popup.scrollTop(0);
 			$popup.show().animate({
 				"opacity": "1"
 			}, 500)
