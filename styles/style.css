@@ -2613,6 +2613,11 @@ table.checklist a {
   .social.tw {
     background-image: url(../images/bg/tw.png); }
 
+.code {
+  display: block;
+  background: #f9f9f9;
+  padding: 20px; }
+
 @media screen and (max-width: 500px) {
   table.schedule td:first-child span {
     font-size: 25px; }
