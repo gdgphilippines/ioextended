@@ -1334,8 +1334,8 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
-							m: 30
+							h: 2,
+							m: 0
 						},
 						id: "",
 						title: "Breakout Sessions",
@@ -1361,8 +1361,8 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
-							m: 30
+							h: 2,
+							m: 0
 						},
 						id: "designthiking",
 						title: "Design Thinking",
@@ -1372,8 +1372,8 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
-							m: 30
+							h: 2,
+							m: 0
 						},
 						id: "firebase",
 						title: "Firebase for Web",
@@ -1383,8 +1383,8 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
-							m: 30
+							h: 2,
+							m: 0
 						},
 						id: "android-n",
 						title: "Codelabs: Android Nougat",
@@ -1394,8 +1394,8 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
-							m: 30
+							h: 2,
+							m: 0
 						},
 						id: "pwa",
 						title: "Codelabs: Progressive Web App",
