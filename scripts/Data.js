@@ -60,6 +60,26 @@ var Data = {
 				tw: ""
 			}
 		},
+		"darth-vidar": {
+			name: "Darth Vidar",
+			title: "Voyager Innovation",
+			bio: "",
+			sm: {
+				gp: "",
+				fb: "",
+				tw: ""
+			}
+		},
+		"elymar-apao": {
+			name: "Elymar Apao",
+			title: "Founder, JumpSparc Inc.",
+			bio: "",
+			sm: {
+				gp: "",
+				fb: "",
+				tw: ""
+			}
+		},
 		"jielynn-diroy": {
 			name: "Jielynn Diroy",
 			title: "Software Engineer",
@@ -1262,10 +1282,10 @@ var Data = {
 							h: 1,
 							m: 0
 						},
-						id: "",
+						id: "keynote",
 						title: "Keynote",
 						desc: "",
-						speakers: []
+						speakers: ["darth-vidar"]
 					},
 					{
 						start: 10.30,
@@ -1295,10 +1315,10 @@ var Data = {
 							h: 0,
 							m: 30
 						},
-						id: "wearable-tech",
+						id: "iot-firebase",
 						title: "Building IoT Apps with Firebase",
 						desc: "",
-						speakers: []
+						speakers: ["elymar-apao"]
 					},
 					{
 						start: 11.45,
