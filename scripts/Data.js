@@ -1511,7 +1511,7 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
+							h: 2,
 							m: 30
 						},
 						id: "",
@@ -1538,7 +1538,7 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
+							h: 2,
 							m: 30
 						},
 						id: "bigquery",
@@ -1549,7 +1549,7 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
+							h: 2,
 							m: 30
 						},
 						id: "designthiking",
@@ -1560,7 +1560,7 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
+							h: 2,
 							m: 30
 						},
 						id: "firebase",
@@ -1571,7 +1571,7 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
+							h: 2,
 							m: 30
 						},
 						id: "android-n",
@@ -1582,7 +1582,7 @@ var Data = {
 					{
 						start: 13,
 						duration: {
-							h: 3,
+							h: 2,
 							m: 30
 						},
 						id: "pwa",
