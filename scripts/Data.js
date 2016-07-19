@@ -1198,17 +1198,6 @@ var Data = {
 							h: 2,
 							m: 0
 						},
-						id: "bigquery",
-						title: "Google Cloud Platform: BigQuery",
-						desc: "",
-						speakers: ["ralph-regalado"]
-					},
-					{
-						start: 13,
-						duration: {
-							h: 2,
-							m: 0
-						},
 						id: "designthiking",
 						title: "Design Thinking",
 						desc: "",
