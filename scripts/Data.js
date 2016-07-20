@@ -73,7 +73,7 @@ var Data = {
 		"elymar-apao": {
 			name: "Elymar Apao",
 			title: "Founder, JumpSparc Inc.",
-			bio: "",
+			bio: "Ely is a User Experience & User Centered Design Coach. He is the founder of UsabilityPhilippines.com (which is now called UX Philippines ). He worked as UX manager in a US Nasdaq-listed Top-100 E-Commerce Site (US Auto Parts) and in a Global Classified-Ads Site (OLX). He now focuses on JumpSparc, an educational community and hardware marketplace for the Internet of Things and the maker culture.",
 			sm: {
 				gp: "",
 				fb: "",
@@ -1367,7 +1367,7 @@ var Data = {
 						id: "designthiking",
 						title: "Design Thinking",
 						desc: "",
-						speakers: ["cristine-chen"]
+						speakers: ["elymar-apao"]
 					},
 					{
 						start: 13,
