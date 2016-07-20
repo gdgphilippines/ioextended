@@ -1520,10 +1520,10 @@ var Data = {
 						speakers: []
 					},
 					{
-						start: 16.30,
+						start: 15.30,
 						duration: {
-							h: 0,
-							m: 30
+							h: 1,
+							m: 0
 						},
 						id: "",
 						title: "Closing",
