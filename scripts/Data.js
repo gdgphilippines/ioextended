@@ -63,7 +63,7 @@ var Data = {
 		"darth-vidar": {
 			name: "Darth Vidar",
 			title: "Voyager Innovation",
-			bio: "",
+			bio: "Computer Science graduate, let's not mention what year. Started as an Embedded Systems developer. Was recently the Mobile Client Development Manager (including Android and iOS app development) at Voyager Innovations, Inc.. Currently the Financial Technologies Software Development Manager at Voyager.",
 			sm: {
 				gp: "",
 				fb: "",
