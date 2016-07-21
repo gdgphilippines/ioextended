@@ -1097,7 +1097,7 @@ var Data = {
 						id: "welcome-remarks",
 						title: "Welcome Remarks, House Rules, Agenda, Prize Instructions",
 						desc: "",
-						speakers: ["adam-baguyo", "jonah-mananghaya"]
+						speakers: ["adam-baguyo"]
 					},
 					{
 						start: 9.30,
@@ -1263,7 +1263,7 @@ var Data = {
 						id: "welcome-remarks",
 						title: "Welcome Remarks, House Rules, Agenda, Prize Instructions",
 						desc: "",
-						speakers: ["adam-baguyo", "jonah-mananghaya"]
+						speakers: ["adam-baguyo"]
 					},
 					{
 						start: 9.30,
