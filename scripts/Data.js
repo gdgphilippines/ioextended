@@ -1335,7 +1335,7 @@ var Data = {
 						start: 13,
 						duration: {
 							h: 2,
-							m: 0
+							m: 30
 						},
 						id: "",
 						title: "Breakout Sessions",
@@ -1343,7 +1343,7 @@ var Data = {
 						speakers: []
 					},
 					{
-						start: 16.30,
+						start: 15.30,
 						duration: {
 							h: 0,
 							m: 30
@@ -1362,7 +1362,7 @@ var Data = {
 						start: 13,
 						duration: {
 							h: 2,
-							m: 0
+							m: 30
 						},
 						id: "designthiking",
 						title: "Design Thinking",
@@ -1373,7 +1373,7 @@ var Data = {
 						start: 13,
 						duration: {
 							h: 2,
-							m: 0
+							m: 30
 						},
 						id: "firebase",
 						title: "Firebase for Web",
@@ -1384,7 +1384,7 @@ var Data = {
 						start: 13,
 						duration: {
 							h: 2,
-							m: 0
+							m: 30
 						},
 						id: "android-n",
 						title: "Codelabs: Android Nougat",
@@ -1395,7 +1395,7 @@ var Data = {
 						start: 13,
 						duration: {
 							h: 2,
-							m: 0
+							m: 30
 						},
 						id: "pwa",
 						title: "Codelabs: Progressive Web App",
