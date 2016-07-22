@@ -1200,7 +1200,7 @@ var Data = {
 						},
 						id: "designthiking",
 						title: "Design Thinking",
-						desc: "",
+						desc: "Plenary Hall - BU Cultural and Sports Center",
 						speakers: ["cristine-chen"]
 					},
 					{
@@ -1211,7 +1211,7 @@ var Data = {
 						},
 						id: "firebase",
 						title: "Firebase for Web",
-						desc: "",
+						desc: "ITB303",
 						speakers: ["joyce-guiao"]
 					},
 					{
@@ -1222,7 +1222,7 @@ var Data = {
 						},
 						id: "android-n",
 						title: "Codelabs: Android Nougat",
-						desc: "",
+						desc: "ITB302",
 						speakers: ["jomar-tigcal"]
 					},
 					{
@@ -1233,7 +1233,7 @@ var Data = {
 						},
 						id: "pwa",
 						title: "Codelabs: Progressive Web App",
-						desc: "",
+						desc: "ITB402",
 						speakers: ["juvar-abrera"]
 					}
 				]
