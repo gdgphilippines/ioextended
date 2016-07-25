@@ -1410,13 +1410,13 @@ var Data = {
 				text: "Agenda",
 				desc: [
 					{
-						start: 8,
+						start: 7,
 						duration: {
-							h: 1,
+							h: 2,
 							m: 0
 						},
 						id: "",
-						title: "Check-in",
+						title: "Check-in/ Booth Interaction",
 						desc: "",
 						speakers: []
 					},
@@ -1424,18 +1424,51 @@ var Data = {
 						start: 9,
 						duration: {
 							h: 0,
-							m: 30
+							m: 20
 						},
-						id: "welcome-remarks",
+						id: "",
+						title: "Games/ Ice-breaker",
+						desc: "",
+						speakers: []
+					},
+					{
+						start: 9.20,
+						duration: {
+							h: 0,
+							m: 5
+						},
+						id: "",
 						title: "Welcome Remarks",
 						desc: "",
-						speakers: ["ralph-regalado"]
+						speakers: []
+					},
+					{
+						start: 9.25,
+						duration: {
+							h: 0,
+							m: 5
+						},
+						id: "",
+						title: "Inspirational Talk",
+						desc: "",
+						speakers: []
 					},
 					{
 						start: 9.30,
 						duration: {
 							h: 0,
-							m: 15
+							m: 10
+						},
+						id: "intro",
+						title: "Introduction to GDG Philippines",
+						desc: "",
+						speakers: ["ralph-regalado"]
+					},
+					{
+						start: 9.40,
+						duration: {
+							h: 0,
+							m: 10
 						},
 						id: "house-rules",
 						title: "House Rules, Agenda, Prize Instructions",
@@ -1443,10 +1476,10 @@ var Data = {
 						speakers: ["adam-baguyo"]
 					},
 					{
-						start: 9.45,
+						start: 9.50,
 						duration: {
 							h: 0,
-							m: 45
+							m: 40
 						},
 						id: "keynote",
 						title: "Keynote",
@@ -1479,7 +1512,7 @@ var Data = {
 						start: 11.15,
 						duration: {
 							h: 0,
-							m: 45
+							m: 30
 						},
 						id: "gcp",
 						title: "Google Cloud Platform",
@@ -1487,21 +1520,21 @@ var Data = {
 						speakers: ["albert-padin"]
 					},
 					{
-						start: 12,
+						start: 11.45,
 						duration: {
 							h: 0,
 							m: 15
 						},
 						id: "",
-						title: "Sponsors' Talk",
+						title: "Android Masters Competition",
 						desc: "",
 						speakers: []
 					},
 					{
-						start: 12.15,
+						start: 12,
 						duration: {
-							h: 0,
-							m: 45
+							h: 1,
+							m: 0
 						},
 						id: "",
 						title: "Lunch",
@@ -1554,7 +1587,7 @@ var Data = {
 						},
 						id: "designthiking",
 						title: "Design Thinking",
-						desc: "",
+						desc: "PSU Performing Arts Center (Plenary)",
 						speakers: ["cristine-chen"]
 					},
 					{
