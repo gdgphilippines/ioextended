@@ -1484,7 +1484,7 @@ var Data = {
 						id: "keynote",
 						title: "Keynote",
 						desc: "",
-						speakers: ["johnny-benitez"]
+						speakers: ["jonathan-joson"]
 					},
 					{
 						start: 10.30,
