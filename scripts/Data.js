@@ -1575,7 +1575,7 @@ var Data = {
 							m: 30
 						},
 						id: "bigquery",
-						title: "Codelabs: Google BigQuery",
+						title: "Google BigQuery & Machine Learning",
 						desc: "",
 						speakers: ["ralph-regalado"]
 					},
