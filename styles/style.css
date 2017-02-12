@@ -2151,9 +2151,9 @@ i.md-icon {
         display: block;
         border-bottom: 2px solid transparent; }
         .action-bar ul.nav li a:hover {
-          border-bottom: 2px solid #b0bec5; }
+          border-bottom: 2px solid #40e6b8; }
         .action-bar ul.nav li a.selected {
-          border-bottom: 2px solid #b0bec5; }
+          border-bottom: 2px solid #40e6b8; }
 
 section {
   min-width: 320px;
