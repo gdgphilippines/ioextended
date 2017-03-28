@@ -37,6 +37,9 @@ var App = {
 		$("a[data-schedule]").click(function() {
 			var action = $(this).attr("data-schedule");
 			App.schedule(this, action);
+		});
+		$("[data-bulaga").each(function() {
+			$(this).bulaga({"animation": "SLIDE_UP", "repeat": true})
 		})
 	},
 	schedule: function(leg, action) {
