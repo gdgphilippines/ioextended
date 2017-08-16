@@ -2337,9 +2337,8 @@ i.register {
     display: block;
     font-weight: normal; }
   .sponsors img {
-    width: 170px;
     vertical-align: middle;
-    margin: 10px; }
+    margin: 24px; }
 
 .footer {
   margin-top: 100px;
@@ -2527,7 +2526,7 @@ table.schedule {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: #b0bec5; }
+    background-color: #40e6b8; }
   .popup span {
     color: #b0bec5; }
     .popup span.title {
@@ -2536,7 +2535,7 @@ table.schedule {
       font-weight: 700;
       font-size: 14px; }
   .popup p {
-    color: #5675f4;
+    color: #666;
     line-height: 150%; }
   .popup .wrapper {
     padding: 24px; }
@@ -2859,6 +2858,9 @@ table.checklist a {
   .t-hide {
     display: none !important; } }
 @media screen and (max-width: 425px) {
+  .content .wrapper, section .wrapper {
+    padding: 24px; }
+
   .m-col-1 {
     width: 8.3333%; }
 

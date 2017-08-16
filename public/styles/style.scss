@@ -3119,9 +3119,8 @@ i.register {
 		font-weight: normal;
 	}
 	img {
-		width: 170px;
 		vertical-align: middle;
-		margin: 10px;
+		margin: 24px;
 	}
 }
 .footer {
@@ -3351,7 +3350,7 @@ table.schedule {
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
-		background-color: #b0bec5;
+		background-color: #40e6b8;
 	}
 	span {
 		color: #b0bec5;
@@ -3363,7 +3362,7 @@ table.schedule {
 		}
 	}
 	p {
-		color: #5675f4;
+		color: #666;
 		line-height: 150%;
 	}
 	.wrapper {
@@ -3712,6 +3711,11 @@ table.checklist  {
 	}
 }
 @media screen and (max-width: 425px) {
+	.content, section {
+		.wrapper {
+			padding: 24px;
+		}
+	}
 	.m-col-1 {
 		width: 8.3333%;
 	}

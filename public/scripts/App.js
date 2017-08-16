@@ -37,7 +37,10 @@ var App = {
 		$("a[data-schedule]").click(function() {
 			var action = $(this).attr("data-schedule");
 			App.schedule(this, action);
-		})
+		});
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('./service-worker.js');
+		}
 	},
 	schedule: function(leg, action) {
 		$section = $("section[name="+leg+"]");
@@ -77,21 +80,27 @@ var App = {
 				if(s.duration.m > 1)
 					duration += "s";
 				var speaker = " / ";
-				if(s.speakers.length != 0) {
-					for(var j in s.speakers) {
-						var speakerProfile = Data.speaker[s.speakers[j]];
-						speaker += '<img src="images/speakers/'+s.speakers[j]+'.jpg" class="speaker">'+speakerProfile.name;
-					}
-				} else speaker = "";
+				if(s.speakers.constructor === Array) {
+					if(s.speakers.length != 0) {
+						for(var j in s.speakers) {
+							var speakerProfile = Data.speaker[s.speakers[j]];
+							speaker += '<img src="images/speakers/'+s.speakers[j]+'.jpg" class="speaker">'+speakerProfile.name;
+						}
+					} else speaker = "";
+				} else {
+					if(s.speakers != "")
+						speaker += s.speakers;
+					else speaker = "";
+				}
 				$section.find("table.schedule").append('<tr'+((s.id == "") ? "" : ' onclick="App.popup(\''+leg+'\', \''+action+'\', \''+s.id+'\')"')+'>'+
 					'<td><span>'+start+'</span>'+apm+'</td>'+
-					'<td><span>'+s.title+((s.id != "") ? '<i class="md-icon" style="margin-left: 12px">info_outline</i>' : "")+'</span><span>'+duration+speaker+'</span></td></tr>');
+					'<td><span>'+s.title+((s.id != "") ? '<i class="mdi mdi-information" style="margin-left: 12px"></i>' : "")+'</span><span>'+duration+speaker+'</span></td></tr>');
 			}
 		}
 	},
 	navigation: function(section) {
 		$current = $("section.selected").attr("name");
-		if($current != section) {
+		if($current != section && section != "") {
 			$("ul.nav a").removeClass("selected");
 			$('ul.nav a[href="#'+section+'"]').addClass("selected");
 			if($("section[name="+section+"]").length == 0) section = "error";
@@ -165,25 +174,19 @@ var App = {
 				((speakerProfile.sm.tw != "") ? '<a href="'+speakerProfile.sm.tw+'" class="social tw" target="_blank"></a>': '')+
 				'</div>';
 			}
+			if(data.speakers.length != 0)
 			$popup.append('<div class="wrapper bt"><span class="title">Speakers</span><div class="columns">'+speaker+'</div></div>')
 			$popup.show().animate({
 				"opacity": "1"
 			}, 500)
-			$popup.css("width", "1000px");
+			$popup.css("width", "700px");
 			App.resizePopup();
-			var width = $popup.outerWidth(), height = $popup.outerHeight();
-			$popup.css({
-				"top": "50%",
-				"left": "50%",
-				"margin-top": 0-(height/2)+"px",
-				"margin-left": 0-(width/2)+"px"
-			});
 		}
 	},
 	resizePopup: function() {
 		$popup = $(".popup");
 		if(window.outerWidth < 700) 
-			$popup.width(window.outerWidth);
+			$popup.css({"width": window.outerWidth});
 		var width = $popup.outerWidth(), height = $popup.outerHeight();
 		$popup.css({
 			"top": "50%",
